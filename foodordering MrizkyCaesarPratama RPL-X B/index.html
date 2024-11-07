@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food ordering</title>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <label for="food">Choose a Food</label>
+            <select id="Food">
+                <option value="0">---Select Food---</option>
+                <option value="50">Burger - $50</option>
+                <option value="80">Pizza - $80</option>
+                <option value="30">Sandwich - $30</option>
+            </select>
+
+            <label for="Drink">Choose a Drink</label>
+            <select id="Drink">
+                <option value="0">---Select Drink---</option>
+                <option value="20">Soda - $20</option>
+                <option value="25">Juice- $25</option>
+                <option value="10">Water - $10</option>
+
+            </select>
+            <button type="button" id="OrderButton">Order Button</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById("OrderButton").oneclick = function; 
+        const foodprice = parseInt(document.getElementById("food").value);
+        const drinkprice = parseInt(document).getElementById("drink").value);
+        let totalprice = foodprice + drinkprice;
+        let discount = 0;
+        if (\totalprice > 100)
+        discount = totalprice * 0,1;
+        totalprice -= discount;// totalprice = totalprice - discount;
+        const resultDiv = document.getElementById("result");
+        if (totalprice > 0) 
+        resultDiv.innerHTML = `
+        total : $${totalprice}<br>
+        discount : $${discount.toFixed(2)}<br>
+        final price : $${totalprice.toFixed(2)}`;
+        else 
+         resultDiv.innerHTML="Please select food and drink";
+        
+
+
+    </script>
+    
+
+</body>
+
+</html>
